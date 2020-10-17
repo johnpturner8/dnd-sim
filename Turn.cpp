@@ -52,7 +52,7 @@ void Turn::runRound(){
 
 void Turn::runTurn(Player p){
 	cout << p.getName() << "'s turn." << endl;
-	if(!p.hasStatus("Unconscious") && !p.death(0)){ //CHECK THIS LATER
+	if(!p.hasStatus("Unconscious") && !p.death()){ //CHECK THIS LATER
 		int input = 0;
 		do{
 			cout << "Select an option:" << endl;
@@ -96,14 +96,14 @@ void Turn::runTurn(Player p){
 		int deathSave;
 		cin >> deathSave;
 		// *** TODO ENTER DEATH SAVE ***
-		if(p.death(0)) // *** TODO update method name
+		if(p.death()) // *** TODO update method name
 			encounter.removePlayer(p);
 	}
 }
 
 void Turn::runTurn(Enemy e){
 	cout << e.getName() << "'s turn." << endl;
-	if(!e.death(0)){ //CHECK THIS LATER
+	if(!e.death()){ //CHECK THIS LATER
 		int input = 0;
 		do{
 			cout << "Select an option:" << endl;
