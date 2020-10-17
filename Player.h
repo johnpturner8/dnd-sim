@@ -40,26 +40,35 @@ public:
 		
 	void setStr(int); void setDex(int); void setCon (int);
         void setInt(int); void setWis(int); void setCha(int);
+
 	void setMaxHP(int); void setCurrentHP(int); 
+
 	void setInitiative(int roll); //Sets the iniative
-	void addStatus(string); void removeStatus(string); void removeStatus(int); 
-private:
-	int str, dex, con, intelligence, wis, cha; //Basic ability stats
-	int maxHP, currentHP; //Hit points
-	int deathSave;
-	int ac; //armor class
-	int speed; //speed
-	int initative; //initative for role order
-	int actPerTurn; //how many actions per turn 
+
+	void addStatus(string); void removeStatus(string); void removeStatus(int);
+	void printStatus(); bool hasStatus(string); 
 	
-	string name; 
+private:
+	//Info found in player file 
+	string filename; 
+	
+	string name;
 	string race;
 	string playerClass;
+	int actPerTurn; //how many actions per turn
+
+	int ac; //armor class
+	int speed; //speed
+	int maxHP;
 	
+	int str, dex, con, intelligence, wis, cha; //Basic ability stats
+
+	//Info not in player file
+	int currentHP;
+	int deathSave; //Character dies when this hits 0 
+	int initative; //initative for role order
 	vector <string> status; 
-       
-	string filename;
-	
+       	
 };
 
 #endif /* PLAYER_H_ */
