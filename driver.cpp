@@ -10,18 +10,20 @@
 #include <fstream>
 #include <cmath>
 #include <iomanip>
+#include "Encounter.h"
+#include "Turn.h"
 using namespace std;
 
 int main(){
   int answer;
   do{
-    cout << "Welcome to DnD Combat Sim" <<endl<<endl
-	 << "[1] Make Encounter\n\t"
+     cout << "Welcome to DnD Combat Sim" <<endl<<endl
+	 << "\t[1] Make Encounter\n\t"
 	 << "[2] Modify Party\n\t"
-         << "[3] Load Encounter\n\t"
-         << "[4] Generate Encounter\n\t"
-         << "[5] Quit Program";
-   cout << "\n\nPlease Select What you Want To Do ";
+	 << "[3] Load Encounter\n\t"
+	 << "[4] Generate Encounter\n\t"
+	 << "[5] Quit Program";
+     cout << "\n\nPlease Select What you Want To Do: ";
    cin >> answer; 
    //For when the user enters invalid characters
    cin.clear();
@@ -34,6 +36,11 @@ int main(){
       case 2:
          break; 
       case 3:
+    	 cout << "Input filename: ";
+    	 string filename;
+    	 cin >> filename;
+    	 Encounter e(filename);
+    	 Turn t()
          break; 
       case 4:
          break; 
