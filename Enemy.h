@@ -20,7 +20,7 @@ public:
 	string getRace();
 	int getInitiative();
 
-	void setStr(int); vod setDex(int); void setCon(int); 
+	void setStr(int); void setDex(int); void setCon(int);
 	void setInt(int); void setWis(int); void setCha(int);
 	void setInitiative(int roll); //Sets the initiative
 
@@ -38,7 +38,7 @@ public:
 private:
 	std::string filename;
 	int str, dex, con, intelligence, wis, cha; //Basic ability stats
-	int maxHP, current HP; //Hit Points
+	int maxHP, currentHP; //Hit Points
 	int ac; //Armor class
 	int speed; //Speed
 	int initiative; //Initiative for role order
