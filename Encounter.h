@@ -27,6 +27,7 @@ class Encounter {
   void removeEnemy(Enemy); //Removes enemies from enemy vector 
   void addPlayer(Player); //Adds players to player vector
   void addEnemy(Enemy); // Adds enemies to enemy vector
+  
   Player getPlayer(int); // Returns player object at a given index
   Player getPlayer(string); // Returns player object given a name
   int getPlayerIndex(string); //Returns the index of the player with the given name
