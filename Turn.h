@@ -18,6 +18,7 @@ public:
 	void rollInit();
 	void runRound();
 	void runTurn(Player p);
+	void runTurn(Enemy e);
 	void attack();
 	void heal();
 	void other();
@@ -25,6 +26,7 @@ public:
 private:
 	Encounter encounter;
 	int curTurn;
+	int maxInit;
 };
 
 #endif /* TURN_H_ */
