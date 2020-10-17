@@ -6,10 +6,11 @@
  */
 
 #include "Enemy.h"
+#include <string>
+using namespace std;
 
-Enemy::Enemy(string f) {
+Enemy::Enemy(string f) { // @suppress("Member declaration not found")
 	filename = f;
-
 }
 
 Enemy::~Enemy() {
