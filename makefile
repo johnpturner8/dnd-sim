@@ -2,7 +2,7 @@
 #Let's see if this works lol
 
 compile:
-	g++ -Wall Player.cpp Enemy.cpp Turn.cpp Encounter.cpp driver.cpp -o Driver.out
+	g++ Player.cpp Enemy.cpp Turn.cpp Encounter.cpp driver.cpp -o Driver.out
 run:
 	./Driver.out
 clean:
