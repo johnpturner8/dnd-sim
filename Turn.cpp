@@ -52,7 +52,7 @@ void Turn::runRound(){
 
 void Turn::runTurn(Player p){
 	cout << p.getName() << "'s turn." << endl;
-	if(p.isAlive()){ //CHECK THIS LATER
+	if(!p.hasStatus("Unconscious") && !p.death(0)){ //CHECK THIS LATER
 		int input = 0;
 		do{
 			cout << "Select an option:" << endl;
@@ -89,20 +89,57 @@ void Turn::runTurn(Player p){
 			}
 		}while (input != 5);
 	}
-	else{
+	else if (p.hasStatus("Unconscious")){
 		cout << p.getName() << " is downed." << endl;
 		// *** PRINT DEATH SAVES ***
 		cout << "Enter death saving throw result: " << endl;
 		int deathSave;
 		cin >> deathSave;
 		// *** TODO ENTER DEATH SAVE ***
-		if(p.isDead()) // *** TODO update method name
+		if(p.death(0)) // *** TODO update method name
 			encounter.removePlayer(p);
 	}
 }
 
 void Turn::runTurn(Enemy e){
+	cout << e.getName() << "'s turn." << endl;
+	if(!e.death(0)){ //CHECK THIS LATER
+		int input = 0;
+		do{
+			cout << "Select an option:" << endl;
+			cout << "1: Attack" << endl;
+			cout << "2: Heal" << endl;
+			cout << "3: Other" << endl;
+			cout << "4: Trigger Reaction" << endl;
+			cout << "5: End Turn" << endl;
 
+			input = 0;
+			cin >> input;
+
+			cin.clear();
+			cin.ignore(9999, '\n');
+
+			switch(input){
+			case 1:
+				attack();
+				break;
+			case 2:
+				heal();
+				break;
+			case 3:
+				other();
+				break;
+			case 4:
+				reaction();
+				break;
+			case 5:
+				break;
+			default:
+				cout << "Invalid Input." << endl;
+				break;
+			}
+		}while (input != 5);
+	}
 }
 
 void Turn::attack(){
