@@ -120,6 +120,91 @@ Enemy::~Enemy() {
 
 }
 
+//**************** other member functions ****************
+
+/*
+Simulates a dice role,
+number of sides is the paramter
+ */
+int Enemy :: roll (int sides)
+{
+  return 0;
+}
+
+/*
+Checks to see if arkRoll hits, based on ac
+ */
+bool Enemy :: hits (int arkRoll)
+{
+  return 0;
+}
+
+/*
+Lowers currentHP
+ */
+void Enemy :: takeDamage(int damage)
+{ currentHP -= damage;}
+
+/*
+Returns true if they are dead
+ */
+bool Enemy :: death()
+{ if (currentHP < 0)
+    { return true; }
+  return false;
+}
+
+/*
+Heals the Enemy by increasing currentHP
+Resets deathSave to 0 if currentHP > 0
+Doesn't let currentHP be greater than maxHP
+ */
+void Enemy :: getHealed (int health)
+{
+  if (currentHP + health > maxHP)
+    { currentHP = maxHP;}
+  else
+    { currentHP += health; }
+  if (currentHP > 0)
+    { deathSave = 0; }
+}
+
+/*
+Adds a status to the status vector
+ */
+void Enemy :: addStatus (string stat)
+{
+}
+
+/*
+Removes an element for vector status based on string
+ */
+void Enemy :: removeStatus(string stat)
+{
+}
+
+/*
+Removes an element for vector status based on number
+ */
+void Enemy :: removeStatus (int element)
+{
+}
+
+/*
+Prints all the elements of the vector status
+ */
+void Enemy :: printStatus()
+{
+}
+
+/*
+Returns true if Enemy has a status and false otherwise
+ */
+bool Enemy :: hasStatus(string stat)
+{
+  return 0;
+}
+
 //************** setter function **************
 
 void Enemy :: setStr (int x)
