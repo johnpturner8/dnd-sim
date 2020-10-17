@@ -38,7 +38,7 @@ public:
 	int heal (int health); //heals 
 
 private:
-	int str, dex, con, intelligence, wis, cha; //Basic ability stas
+	int str, dex, con, intelligence, wis, cha; //Basic ability stats
 	int maxHP, currentHP; //Hit points 
 	int ac; //armor class
 	int speed; //speed
