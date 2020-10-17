@@ -40,7 +40,9 @@ int main(){
     	 string filename;
     	 cin >> filename;
     	 Encounter e(filename);
-    	 Turn t()
+    	 Turn t(e);
+    	 t.rollInit();
+    	 t.runRound();
          break; 
       case 4:
          break; 
