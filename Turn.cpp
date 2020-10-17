@@ -153,10 +153,10 @@ void Turn::heal(){
 		cout << "\t" << "Enter Target Name." << endl << "\t";
 		getline(cin, name);
 
-		ind = getEnemyIndex(name);
+		ind = encounter.getEnemyIndex(name);
 		player = false;
 		if(ind == -1){
-			ind = getPlayerIndex(name);
+			ind = encounter.getPlayerIndex(name);
 			player = true;
 		}
 		if(ind == -1){
@@ -193,6 +193,7 @@ void Turn::other(){
 
 		switch(input){
 		case 1:
+		{
 			string name;
 			bool redo = false;
 			bool player = false;
@@ -225,7 +226,9 @@ void Turn::other(){
 				encounter.getEnemy(ind).addStatus(status);
 			}
 			break;
+		}
 		case 2:
+		{
 			string name;
 			bool redo = false;
 			bool player = false;
@@ -277,6 +280,7 @@ void Turn::other(){
 			}while(status != "quit");
 
 			break;
+		}
 		case 3:
 			break;
 		default:
