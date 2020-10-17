@@ -4,14 +4,42 @@ Emily
  */
 
 #include "Player.h"
+#include <iostream>
+#include <fstream> 
 #include <string>
+
+//*************** constructors and destructor ****************
 
 /*
 Constuctor
 Asks for input and makes a file 
  */
-Player::Player() {
+Player::Player()
+{
+  fstream file;
+  
+  cout << "Please enter filename to save to: ";
+  cin >> filename;
+  //opens the file with given name
+  //ios::out oepn for output operators
+  //ios::out makes a file if ther is not one already
+  file.open(filename.c_str(), ios::out); 
+  
+  cout << "Please enter player/character name: ";
+  cout << "Please enter character race: ";
+  cout << "Please enter character's class: ";
+  cout << "Please enter how many actions character can make per turn: "; 
 
+  cout << "Please enter armor class (AC): ";
+  cout << "Please enter character's speed: ";
+  cout << "Please enter character's hit point maximum: "; 
+  
+  cout << "Pleaser enter character strength: ";
+  cout << "Pleaser enter character dexterity: ";
+  cout << "Pleaser enter character constitution: ";
+  cout << "Pleaser enter character intelligence: ";
+  cout << "Pleaser enter character wisdom: ";
+  cout << "Pleaser enter character charisma: ";
 }
 
 /*
