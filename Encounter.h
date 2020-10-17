@@ -8,8 +8,9 @@
 #ifndef ENCOUNTER_H_
 #define ENCOUNTER_H_
 
-#include <Player.h>
-#include <Enemy.h>
+#include "Player.h"
+#include "Enemy.h"
+#include "Turn.h"
 
 #include <vector>
 #include <fstream>
