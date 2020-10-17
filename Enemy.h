@@ -13,17 +13,17 @@ using namespace std;
 
 class Enemy {
 public:
-	Enemy(void); //Prompts user for player information
-	Enemy(string filename); //Loads player from file
+	Enemy(void); //Prompts user for Enemy information
+	Enemy(string filename); //Loads Enemy from file
 	virtual ~Enemy(); //destructor
 	//functions to get basic stats
 
 	int roll(int dice); //simulates a dice role by generating a random number % dice
 
 	bool hits (int arkRoll); //returns if the attack role hits
-	void takeDamage(int damage); //checks to see player died also
-	bool death (int); //returns true of player dies
-	void getHealed (int health);//Heals player by increasing current HP
+	void takeDamage(int damage); //checks to see Enemy died also
+	bool death (int); //returns true of Enemy dies
+	void getHealed (int health);//Heals Enemy by increasing current HP
 	//Also retests deathSave back to 0
 	//Also keeps it from going above maxHP
 
@@ -50,12 +50,12 @@ public:
 	void printStatus(); bool hasStatus(string);
 	
 private:
-	//Info found in player file
+	//Info found in Enemy file
 	string filename;
 	
 	string name;
 	string race;
-	string playerClass;
+	string EnemyClass;
 	int actPerTurn; //how many actions per turn
 
 	int ac; //armor class
@@ -64,7 +64,7 @@ private:
 	
 	int str, dex, con, intelligence, wis, cha; //Basic ability stats
 
-	//Info not in player file
+	//Info not in Enemy file
 	int currentHP;
 	int deathSave; //Character dies when this hits 0
 	int initative; //initative for role order
