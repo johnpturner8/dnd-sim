@@ -7,6 +7,7 @@ Emily and John
 #ifndef PLAYER_H_
 #define PLAYER_H_
 #include <string>
+#include <vector>
 using namespace std; 
 
 class Player {
@@ -21,9 +22,11 @@ public:
 	string getClass(); 
 	int getInitiative();
 	
-	void setStr(int); void setDex(int); void setCon ();
-        void setInt(int); void setWis(int); void setCha(); 
+	
+	void setStr(int); void setDex(int); void setCon (int);
+        void setInt(int); void setWis(int); void setCha(int); 
 	void setInitiative(int roll); //Sets the iniative
+	void addStatus(string); void removeStatus(string); void removeStatus(int); 
 
 	int roll(int dice); //simulates a dice role by generating a random number % dice
 
@@ -44,12 +47,15 @@ private:
 	int speed; //speed
 	int initative; //initative for role order
 	int actPerTurn; //how many actions per turn 
-
-	string name; //player turn
-	string race;
-	string class; 
 	
-	std::string filename;
+	string name; 
+	string race;
+	string playerClass;
+	
+	vector <string> status; 
+       
+	string filename;
+	
 };
 
 #endif /* PLAYER_H_ */
