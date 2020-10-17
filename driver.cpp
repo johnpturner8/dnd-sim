@@ -15,14 +15,25 @@
 using namespace std;
 
 int main(){
-  int answer;
+  Encounter e;
+  Player p;
+  Enemy e1, e2;
+
+  e.addPlayer(p);
+  e.addEnemy(e1);
+  e.addEnemy(e2);
+
+  Turn t(e);
+  t.rollInit();
+  t.runRound();
+  
+  /*  int answer;
   do{
      cout << "Welcome to DnD Combat Sim" <<endl<<endl
 	 << "\t[1] Make Encounter\n\t"
 	 << "[2] Modify Party\n\t"
 	 << "[3] Load Encounter\n\t"
-	 << "[4] Generate Encounter\n\t"
-	 << "[5] Quit Program";
+	 << "[4] Quit Program";
      cout << "\n\nPlease Select What you Want To Do: ";
    cin >> answer; 
    //For when the user enters invalid characters
@@ -36,7 +47,7 @@ int main(){
       case 2:
          break; 
       case 3:
-    	 cout << "Input filename: ";
+	cout << "Input filename: ";
     	 string filename;
     	 cin >> filename;
     	 Encounter e(filename);
@@ -45,12 +56,14 @@ int main(){
     	 t.runRound();
          break; 
       case 4:
-         break; 
-      case 5:
-         break;
+	exit(0);
+	break;
+      default:
+	break;
       }
 
-   } while (answer!=5);
+   } while (answer!=4);
+  */
 return 0;
 
 }
