@@ -206,10 +206,10 @@ void Turn::heal(){
 	cout << "Enter healing: ";
 	cin >> healing;
 	if(player){
-		encounter.getPlayer(ind).heal(healing);
+		encounter.getPlayer(ind).getHealed(healing);
 	}
 	else{
-		encounter.getEnemy(ind).heal(healing);
+		encounter.getEnemy(ind).getHealed(healing);
 	}
 	cout << endl;
 }
