@@ -12,7 +12,7 @@ using namespace std;
 
 class Player {
 public:
-	Player(); //Prompts user for player information
+	Player(void); //Prompts user for player information
 	Player(string filename); //Loads player from file
 	virtual ~Player(); //destructor
 	//functions to get basic stats
