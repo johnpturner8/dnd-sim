@@ -21,14 +21,10 @@ public:
 
 	bool hits (int arkRoll); //returns if the attack role hits
 	void takeDamage(int damage); //checks to see player died also
-	bool death (int); //returns true of player dies
+	bool death (); //returns true of player dies
 	void getHealed (int health);//Heals player by increasing current HP
 	//Also retests deathSave back to 0
 	//Also keeps it from going above maxHP
-
-	int attack();
-	int attack(int roll, int damage); //dmage includes the modifiers
-	int heal (int health); //heals
 	
 	string getFileName(); 
 	int getStr(); int getDex(); int getCon(); int getInt(); int getWis(); int getCha();
