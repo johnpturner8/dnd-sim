@@ -120,6 +120,91 @@ Player::~Player() {
 
 }
 
+//**************** other member functions ****************
+
+/*
+Simulates a dice role,
+number of sides is the paramter 
+ */
+int Player :: roll (int sides)
+{
+  return 0;
+}
+
+/*
+Checks to see if arkRoll hits, based on ac
+ */
+bool Player :: hits (int arkRoll)
+{
+  return 0;
+}
+
+/*
+Lowers currentHP
+ */
+void Player :: takeDamage(int damage)
+{ currentHP -= damage;}
+
+/*
+Returns true if they are dead 
+ */
+bool Player :: death()
+{ if (currentHP < 0)
+    { return true; }
+  return false; 
+}
+
+/*
+Heals the player by increasing currentHP
+Resets deathSave to 0 if currentHP > 0
+Doesn't let currentHP be greater than maxHP
+ */
+void Player :: getHealed (int health)
+{
+  if (currentHP + health > maxHP)
+    { currentHP = maxHP;}
+  else
+    { currentHP += health; }
+  if (currentHP > 0)
+    { deathSave = 0; }
+}
+
+/*
+Adds a status to the status vector 
+ */
+void Player :: addStatus (string stat)
+{
+}
+
+/*
+Removes an element for vector status based on string 
+ */
+void Player :: removeStatus(string stat)
+{
+}
+
+/*
+Removes an element for vector status based on number
+ */
+void Player :: removeStatus (int element)
+{
+}
+
+/*
+Prints all the elements of the vector status 
+ */
+void Player :: printStatus()
+{
+}
+
+/*
+Returns true if player has a status and false otherwise 
+ */
+bool Player :: hasStatus(string stat)
+{
+  return 0; 
+}
+
 //************** setter function **************
 
 void Player :: setStr (int x)
