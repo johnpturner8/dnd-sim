@@ -16,33 +16,37 @@ public:
 	Player(string filename); //Loads player from file
 	virtual ~Player(); //destructor
 	//functions to get basic stats
-	int getStr(); int getDex(); int getCon(); int getInt(); int getWis(); int getCha();
-	string getName();
-	string getRace();
-	string getClass(); 
-	int getInitiative();
-	
-	
-	void setStr(int); void setDex(int); void setCon (int);
-        void setInt(int); void setWis(int); void setCha(int); 
-	void setInitiative(int roll); //Sets the iniative
-	void addStatus(string); void removeStatus(string); void removeStatus(int); 
 
 	int roll(int dice); //simulates a dice role by generating a random number % dice
 
 	bool hits (int arkRoll); //returns if the attack role hits
-	bool takeDamage(int damage); //checks to see player died also
+	void takeDamage(int damage); //checks to see player died also
+	bool death (int); //returns true of player dies
 	void getHealed (int health);//Heals player by increasing current HP
+	//Also retests deathSave back to 0
 	//Also keeps it from going above maxHP
 
-	int attack(); 
+	int attack();
 	int attack(int roll, int damage); //dmage includes the modifiers
-
-	int heal (int health); //heals 
-
+	int heal (int health); //heals
+	
+	string getFileName(); 
+	int getStr(); int getDex(); int getCon(); int getInt(); int getWis(); int getCha();
+	int getMaxHP(); int getCurrentHP();
+	int getInitiative();
+	string getName();
+	string getRace();
+	string getClass(); 
+		
+	void setStr(int); void setDex(int); void setCon (int);
+        void setInt(int); void setWis(int); void setCha(int);
+	void setMaxHP(int); void setCurrentHP(int); 
+	void setInitiative(int roll); //Sets the iniative
+	void addStatus(string); void removeStatus(string); void removeStatus(int); 
 private:
 	int str, dex, con, intelligence, wis, cha; //Basic ability stats
-	int maxHP, currentHP; //Hit points 
+	int maxHP, currentHP; //Hit points
+	int deathSave;
 	int ac; //armor class
 	int speed; //speed
 	int initative; //initative for role order
