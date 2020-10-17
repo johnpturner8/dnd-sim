@@ -22,7 +22,7 @@ public:
 
 	bool hits (int arkRoll); //returns if the attack role hits
 	void takeDamage(int damage); //checks to see Enemy died also
-	bool death (int); //returns true of Enemy dies
+	bool death (); //returns true of Enemy dies
 	void getHealed (int health);//Heals Enemy by increasing current HP
 	//Also retests deathSave back to 0
 	//Also keeps it from going above maxHP
