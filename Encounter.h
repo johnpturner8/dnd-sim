@@ -29,8 +29,10 @@ class Encounter {
   void addEnemy(Enemy); // Adds enemies to enemy vector
   Player getPlayer(int); // Returns player object at a given index
   Player getPlayer(string); // Returns player object given a name
+  int getPlayerIndex(string); //Returns the index of the player with the given name
   Enemy getEnemy(int); // Returns enemy object at a given index
   Enemy getEnemy(string); // Returns enemy object given a name
+  int getEnemyIndex(string); //Returns the index of the enemy with the given name
   friend class Turn;
   
  private:
