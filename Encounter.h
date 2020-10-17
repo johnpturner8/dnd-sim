@@ -24,6 +24,7 @@ class Encounter {
   void removeEnemy(Enemy);
   void addPlayer(Player);
   void addEnemy(Enemy);
+  friend class Turn;
   
  private:
   vector<Player> party;
