@@ -9,11 +9,11 @@ Emily
 #include <string>
 
 //Purely here for testing, will delete later
-int main()
+/*int main()
 {
   Enemy pl;
   return 0;
-}
+  }*/
 
 //*************** constructors and destructor ****************
 
@@ -79,7 +79,7 @@ Clears cin and writes to the file
 Called by default constructor
 SCRAPPED VALIDATION FOR  TIME
  */
-int validInputNum (string request, fstream &file, int lower, int upper)
+/*int validInputNum (string request, fstream &file, int lower, int upper)
 {
   int temp;
   cin >> temp;
@@ -95,7 +95,7 @@ Clears cin, so anything after a whitespace is ignored
 Writes to the file
 Called by default constructor
 */
-string validInputString(string request, fstream& file)
+/*string validInputString(string request, fstream& file)
 {
   string temp;
   cin >> temp;
@@ -103,7 +103,7 @@ string validInputString(string request, fstream& file)
   cin.ignore(9999,'\n');
   file << request << temp << endl;
   return temp;
-}
+  }*/
 
 /*
 Constuctor

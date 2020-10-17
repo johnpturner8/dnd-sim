@@ -9,11 +9,11 @@ Emily
 #include <string>
 
 //Purely here for testing, will delete later 
-int main()
+/*int main()
 {
   Player pl;
   return 0;
-}
+  }*/
 
 //*************** constructors and destructor ****************
 

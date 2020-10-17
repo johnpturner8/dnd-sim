@@ -1,0 +1,3 @@
+NAME: hi
+RACE: orc
+CLASS: a
