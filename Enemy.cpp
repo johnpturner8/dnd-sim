@@ -7,8 +7,8 @@
 
 #include "Enemy.h"
 
-Enemy::Enemy() {
-	// TODO Auto-generated constructor stub
+Enemy::Enemy(string f) {
+	filename = f;
 
 }
 
